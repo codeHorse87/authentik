@@ -128,7 +128,7 @@ class IngressReconciler(KubernetesObjectReconciler[V1Ingress]):
                                         port=V1ServiceBackendPort(name="http"),
                                     ),
                                 ),
-                                path="/outpost.goauthentik.io",
+                                path="/outpost.goauthentik.io/start",
                                 path_type="Prefix",
                             )
                         ]

@@ -39,14 +39,4 @@ spec:
                 namespace: authentik
           priority: 10
           services: # Unchanged
-        # This part is only required for single-app setups
-        - kind: Rule
-          match: "Host(`app.company`) && PathPrefix(`/outpost.goauthentik.io/`)"
-          priority: 15
-          services:
-              - kind: Service
-                # Or, to use an external Outpost, create an ExternalName service and reference that here.
-                # See https://kubernetes.io/docs/concepts/services-networking/service/#externalname
-                name: ak-outpost-example-outpost
-                port: 9000
 ```

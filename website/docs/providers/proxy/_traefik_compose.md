@@ -27,9 +27,6 @@ services:
             # when authentik_host for internal communication doesn't match the public URL
             # AUTHENTIK_HOST_BROWSER: https://external-domain.tld
         labels:
-            traefik.enable: true
-            traefik.port: 9000
-            traefik.http.routers.authentik.rule: Host(`app.company`) && PathPrefix(`/outpost.goauthentik.io/`)
             # `authentik-proxy` refers to the service name in the compose file.
             traefik.http.middlewares.authentik.forwardauth.address: http://authentik-proxy:9000/outpost.goauthentik.io/auth/traefik
             traefik.http.middlewares.authentik.forwardauth.trustForwardHeader: true

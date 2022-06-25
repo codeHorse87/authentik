@@ -24,8 +24,4 @@ http:
                 - name: authentik
             priority: 10
             services: # Unchanged
-        default-router-auth:
-            match: "Host(`app.company`) && PathPrefix(`/outpost.goauthentik.io/`)"
-            priority: 15
-            services: http://outpost.company:9000/outpost.goauthentik.io
 ```
