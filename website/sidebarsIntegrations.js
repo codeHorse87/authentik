@@ -74,6 +74,7 @@ module.exports = {
                     items: [
                         "services/budibase/index",
                         "services/wordpress/index",
+                        "services/learnworlds/index",
                     ],
                 },
                 {
